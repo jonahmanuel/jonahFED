@@ -58,7 +58,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
+  tijdens het testen van de toegankelijkheid van mijn gekozen site heb ik gebruik gemaakt van de voice over functie die apple aanbiedt. ik heb verschillende pagina's geprobeerd en ik ben gaan kijken wat hier wel en niet goed aan werkt. zo ben ik er achter gekomen wat ik bij mijn eigen versie van de website beter kan maken zodat de website nog toegankelijker is. 
+
   Lijst met je bevindingen die in de test naar voren kwamen:
+  - de afbeeldingen/iconen in de header worden niet duidelijk berschreven. er wordt verteld dat het om een link en een nav gaat maar er wordt niet verteld waar deze nav dan voor dient en waar de gebruiker naar toe gaat als hij/zij hier op klikt. 
+  <img src="images/screenreaderknopnav.jpg" width="375px" alt="afbeelding van de screenreader die niet aan geeft op wat voor soort nav de gebruiker zich bevind.">
+  - zelf vond ik dat de bestuuring van de voice over tool op de site niet helemaal werkten zoals zou moeten. er werd niet aangegeven waar de voice over aan het lezen is en vaak wordt er niet gereageerd op de pijltjes en de tab toetsen. 
+  - ook wordt alles wat de voice over voorleest twee keer verteld, de eerste keer in het nederlands en de tweede keer in het duits. dit deed de tool eigenlijk al vanaf het begin en ik heb dit dus niet ingesteld. ik vind het zelf hierdoor erg onoverzichtelijk worden en er valt weinig te begrijpen van wat er nou daadwerkelijk gezegd wordt. 
+ <img src="images/screenreaderduits.jpg" width="375px" alt="afbeelding van de screenreader die alles in het nederland en duits voorleest.">
 
 </details>
 
