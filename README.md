@@ -36,7 +36,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp: 
+
+  https://livefastdieyoung.com/en-nlv
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
@@ -80,8 +82,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="images/schets1.4.png" width="375px" alt="breakdown van nog een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="images/schets2.1.png" width="375px" alt="breakdown van nog een dynamisch deel">
 </details>
+
+  ### wellicht nog een dynamisch deel (bijv filter): 
+  <img src="images/schets2.2.png" width="375px" alt="breakdown van nog een dynamisch deel">
+</details>
+
+  ### wellicht nog een dynamisch deel (bijv filter): 
+  <img src="images/schets2.3.png" width="375px" alt="breakdown van nog een dynamisch deel">
+</details>
+
+
 
 
 
@@ -95,6 +107,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+  Ik vind coderen erg lastig. De oefeningetjes die we in de les hebben gedaan gingen wel, maar wanneer ik het voor mn eigen site moet gaan doen word het erg lastig. Ik heb geen goed overzicht van wat ik aan het doen ben, en ben vooral aan het proberen. Maar ik weet niet echt wat ik precies aan het doen ben. Dit vind ik vervelend. Na wat hulp van de studentassistenten is gebleken dat ik een erg lastige site heb gekozen. 
+
+  Ik heb tot nu toe mijn hele html van de homepage en wat css geschreven. dit ging wel redelijk met behulp van mijn breakdownschets. Maar toen ik eenmaal aan de css begon ging het stroef. Heel veel proberen, delen uitcommenten, en weer nieuwe schrijven om te kijken wat er gebeurd. 
+
+  Mijn header heeft nu enige vormgeving, al krijg ik het icoontje van mijn menu er niet in. 
+  <img src="images/demofotocode.png" width="375px" alt="breakdown van nog een dynamisch deel">
 
   ### Agenda voor meeting
   samen met je groepje opstellen
