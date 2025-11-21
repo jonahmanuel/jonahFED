@@ -63,8 +63,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Lijst met je bevindingen die in de test naar voren kwamen:
   - de afbeeldingen/iconen in de header worden niet duidelijk berschreven. er wordt verteld dat het om een link en een nav gaat maar er wordt niet verteld waar deze nav dan voor dient en waar de gebruiker naar toe gaat als hij/zij hier op klikt. 
   <img src="images/screenreaderknopnav.jpg" width="375px" alt="afbeelding van de screenreader die niet aan geeft op wat voor soort nav de gebruiker zich bevind.">
-  - zelf vond ik dat de bestuuring van de voice over tool op de site niet helemaal werkten zoals zou moeten. er werd niet aangegeven waar de voice over aan het lezen is en vaak wordt er niet gereageerd op de pijltjes en de tab toetsen. 
-  - ook wordt alles wat de voice over voorleest twee keer verteld, de eerste keer in het nederlands en de tweede keer in het duits. dit deed de tool eigenlijk al vanaf het begin en ik heb dit dus niet ingesteld. ik vind het zelf hierdoor erg onoverzichtelijk worden en er valt weinig te begrijpen van wat er nou daadwerkelijk gezegd wordt. 
+  - zelf vond ik dat de besturing van de voice over tool op de site niet helemaal werkten zoals hij zou moeten. er werd niet aangegeven waar de voice over aan het lezen is en vaak wordt er niet gereageerd op de pijltjes en de tab toetsen. 
+  - ook wordt alles wat de voice over voorleest twee keer verteld, de eerste keer in het nederlands en de tweede keer in het duits. dit deed de tool eigenlijk al vanaf het begin en ik heb dit dus niet ingesteld. Ik vind het zelf hierdoor erg onoverzichtelijk worden.
  <img src="images/screenreaderduits.jpg" width="375px" alt="afbeelding van de screenreader die alles in het nederland en duits voorleest.">
 
 </details>
@@ -124,7 +124,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+Selina: 
+	1.	Wanneer gebruik je een <p>binnen een <a> en wanneer niet? Wat is hierbij de beste en duidelijkste manier?
+	2.	Hebben we onze <article> elementen op de juiste plekken gebruikt?
+	3.	Is het handig dat we section:nth-of-type()gebruiken, of kunnen we beter met classes werken?
+	4.	Is onze HTML-indeling en de volgorde van de kopjes (h1, h2, h3) logisch?
+	5.	Gebruiken we Grid en Flexbox op de juiste manier?
+
+Naz: Punt: 4 & 5 Selina en over header en footer
+Callista: 2 & 5 van selina 
+Jonah: Ook punt 4&5. Styling icoontjes in header. Hoe maak ik mijn logo groter. Ik zie het svg'tje van mn hamburgermenu niet. 
+
+
+
+  | Selina         | Naz                | Callista    | Jonah 4        |
   | ---            | ---                | ---          | ---              |
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
