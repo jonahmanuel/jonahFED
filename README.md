@@ -147,9 +147,11 @@ Jonah: Ook punt 4&5. Styling icoontjes in header. Hoe maak ik mijn logo groter. 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
+  - punt 1:  Het lukte mij niet om de svg van mijn hamburgermenu in beeld te krijgen. Ook Jules en Matthijs lukte dit niet.
+             Het bleek uiteindelijk aan de svg die ik van de site had gekopieerd te liggen. Ik heb vervolgens een andere 
+             gepakt. 
+  - punt 2  Ze hebben mij laten zien hoe ik mijn logo van grootte kan veranderen
+  - nog een punt: Ik kreeg mijn icoontjes in de header niet goed gespaced. Ook dit hebben we opgelost. 
   - ...
 
 </details>
@@ -164,13 +166,20 @@ Jonah: Ook punt 4&5. Styling icoontjes in header. Hoe maak ik mijn logo groter. 
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ik begin er nu eindelijk een beetje in te komen. Het is nogsteeds veel proberen tot het lukt, maar ergens begin ik 
+  er wel plezier in te krijgen omdat het lukt. 
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  Selina: heeft vragen over haar button en linkjes. 
+  Naz: Caroussel verdwijnt en header verdwijnt onder haar foto's. Haar foto's tijdens het scrollen en nog over een section in haar productpagina.
+  Jonah: Hoe zorg ik ervoor dat de foto's in mijn caroussel niet verslepen als je wil scrollen in de caroussel? en dezelfde vraag over nog een
+        caroussel op mijn productpagina. 
+  Callista:
+
+  | Naz          | naz        | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
