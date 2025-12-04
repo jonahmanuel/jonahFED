@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**************/
+/* FONT FACE */
+/**************/
+
+/* @font-face {
+    font-family: lfdy;
+    src: url();
+}
+
+@font-face {
+    font-family: lfdy;
+    src: url();
+}
+
+@font-face {
+    font-family: lfdy;
+    src: url();
+} */
+
+
+/**********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+:root {
+    --background-color: black;
+    --header-items: white;
+    --header-background: black;
+    --text-white: white;
+    --text-black: black;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: white;
+    line-height: 1.5em;
+}
+/* puntjes op de steden weg */
+ul {
+    list-style: none;
+}
+
+
+header ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 1em;
+    gap: 1.5em;          /* normale ruimte tussen iconen */
+}
+
+/* logo echt in het midden duwen */
+header ul li:nth-of-type(3) {
+    margin: 0 auto;      /* links en rechts uit elkaar */
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+}
+/* aanpassen!! */
+.visually-hidden {
+    display: none;
+}
+
+svg {
+    width: 1em;
+    height: 1em;
+}
+
+svg path{
+    fill: white;
+    stroke: white;
+}
+
+header button img {
+    width: 1.5em;
+    height: 1.5em;
+    filter: invert(1);
+
+}
+/* logo aanpassen */
+nav ul li:nth-of-type(3) svg {
+    width: 5em;
+    height: auto;
+}
+
+footer {
+    background-color: white;
+    color: black;
+    padding: 0;
+    margin: 0;
+    border-top: .1em black solid;
+}
+
+footer section {
+    padding: 0 1em;
+}
+
+
+
+
+
+
+
+
+
+/* De lijst met secties */
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .8em;
+    font-weight: 300;
+    padding: .5em;
+    border-bottom: .1em black solid;
+}
+
+/* Het PLUS icoontje */
+footer ul li::after {
+    content: "+";
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+/* De link zelf */
+footer ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* copyright */
+footer p {
+    font-size: .7em;
+    color: #555;
+    padding: 1.5em 0;
+    text-transform: uppercase;
+}
+
+
+
+

@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**************/
+/* FONT FACE */
+/**************/
+
+/* @font-face {
+    font-family: lfdy;
+    src: url();
+}
+
+@font-face {
+    font-family: lfdy;
+    src: url();
+}
+
+@font-face {
+    font-family: lfdy;
+    src: url();
+} */
+
+
+
+/**********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+:root {
+    --background-color: black;
+    --header-items: white;
+    --header-background: black;
+    --text-white: white;
+    --text-black: black;
+}
+
+
+/* section 1 */
+main section:first-of-type img {
+    width: 100%;
+    height: 60vh;
+    /* object-fit: cover;
+    display: block; */
+}
+
+/* container rond hero */
+main > section:first-of-type a {
+    /* position: relative;
+    display: block; */
+
+}
+
+/* “ALL PRODUCTS” linksonder */
+main section:first-of-type h2 {
+    /* position: absolute;
+    left: 1em;
+    bottom: .5em; */
+    font-size: 1.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* pijltje rechtsonder */
+main section:first-of-type p {
+    /* position: absolute;
+    right: 1em;
+    bottom: .5em; */
+}
+
+section:nth-of-type(1) {
+    display: grid;
+    grid-tem
+}
+
+main section:nth-of-type(1) svg {
+    width: 1.5em;
+    height: 1.5em; 
+    path {
+        fill: var(--text-white);
+    }
+}
+
+
+
+
+
+/* section 2 */
+
+/* section 3 */
+
+/* section 4 */
+
+/* section 5 */
