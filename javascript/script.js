@@ -73,3 +73,20 @@ function toonOfVerbergHeader() {
   // nieuwe positie onthouden
   lastScrollY = window.scrollY;
 }
+
+// FOOTER 
+// alle h3-kopjes in de footer pakken
+const footerHeadings = document.querySelectorAll(
+  "footer section > ul > li > h3"
+);
+
+// bij elk kopje een klik-event
+footerHeadings.forEach((heading) => {
+  heading.addEventListener("click", () => {
+    const li = heading.parentElement;
+    const isOpen = li.getAttribute("data-open") === "true";
+
+    // toggle data-open: true / false
+    li.setAttribute("data-open", isOpen ? "false" : "true");
+  });
+});
