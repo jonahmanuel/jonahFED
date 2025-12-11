@@ -207,7 +207,12 @@ Jonah: Ook punt 4&5. Styling icoontjes in header. Hoe maak ik mijn logo groter. 
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
-
+Ik heb duidelijke alt teksten toegevoegd. op de echte site worden afbeeldingen en iconen niet goed beschreven door de screenreader. Op de echte site krijg je "nav, image, link".
+ik heb aria labels toegevoegd voor iconen en knoppen. Op de echte site staat er alleen button. 
+Ik heb de focus styles verbeterd voor toetsenbord gebruikers. 
+Ik heb een juiste heading structuur gebruikt. 
+knoppen en links zijn duidelijk benoemd nu, op de echte site zijn er knoppen zonder tekst. 
+De echte site heeft geen light en dark mode. die heb ik nu wel 
 </details>
 
 
@@ -236,10 +241,8 @@ Jonah: Ook punt 4&5. Styling icoontjes in header. Hoe maak ik mijn logo groter. 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+Ik heb vlak voor dit gesprek de keuze gemaakt om opnieuw met mijn css te beginnen
+Ik had het niet volgens de regels gedaan, dus ik had hier uiteindelijk niet veel vragen. eigenlijk geen.
 
 </details>
 
@@ -253,19 +256,23 @@ Jonah: Ook punt 4&5. Styling icoontjes in header. Hoe maak ik mijn logo groter. 
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="images/home.png" width="375px" alt="uitomst opdracht 1">\
+    <img src="images/product.png" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
+Ik had eigenlijk nog helemaal geen basis. De vakken waar we vorig jaar bij moesten coderen heb ik maar net gered. En toen begreep ik er al weinig van. Ik heb nu wel het idee dat ik zeker de basis onder de knie heb. Flex en Grid vond ik op een gegeven moment wel leuk om te gebruiken. En als je uren bezig bent geweest met iets wat niet lukt, en het lukt uiteindelijk wel geeft dit een erg voldoenend gevoel. 
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="images/layout.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
+Ik heb erg veel lopen rommelen met mijn header. Op de ene pagina moet deze wit zijn, op de andere zwart. Dit is uiteindelijk wel gelukt. Vervolgens wilde ik ervoor zorgen dat wanneer je naar benede scrollt (op de home page) dat de header terugkomt zoals hij dat nu doet. Maar dan met een witte background zoals op de echte site. Maar dit is me uiteindelijk niet gelukt. Hij komt nu wel terug, maar zonder achtergrond dus deze is niet goed te zien. Verder vind ik dit echt een moeilijk vak, en mijn passie ligt er niet. Als er vragen aan mij worden gesteld in de les heb ik geen idee wat ik moet antwoorden ookal volg ik wel alles en probeer ik het toe te passen. Nogsteeds heb ik moeite met begrijpen wat ik nou heb gedaan. Ookal is het wel gelukt na lang ploeteren. In dark mode heb ik de "waarschuw" button niet kunnen fixen. 
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="images/header.png" width="375px" alt="bummer">
+  <img src="images/waarschuw.png" width="375px" alt="bummer">
 </details>
 
 
@@ -281,8 +288,10 @@ Jonah: Ook punt 4&5. Styling icoontjes in header. Hoe maak ik mijn logo groter. 
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
+  2. https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label
+  3.  https://www.a11yproject.com/posts/how-to-hide-content/
+  4. https://stackoverflow.com/questions/9280258/prevent-page-scrolling-when-a-modal-is-open
+  5. chatgpt voor ondersteuning en verbetering
 
 </details>
