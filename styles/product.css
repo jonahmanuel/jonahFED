@@ -1,18 +1,12 @@
-/* =========================
-   PRODUCT PAGE – MOBILE FIRST
-   ========================== */
+/*PRODUCT PAGE – MOBILE FIRST */
 
-/* basis */
+
 body {
     margin: 0;
     background-color: var(--background-light);
     color: var(--text-black);
     font-size: 1em;           
 }
-
-/* =========================
-   PRODUCT PAGINA – HEADER THEMA
-   ========================== */
 
 /* header op productpagina altijd wit */
 body > header {
@@ -25,18 +19,16 @@ body > header nav svg path {
     fill: none;
 }
 
-/* LFDY-logo solid zwart */
+/* logo zwart */
 body > header nav ul:first-of-type li:nth-of-type(3) svg path {
     fill: var(--text-black);
     stroke: var(--text-black);
 }
 
-/* hamburgerplaatje niet meer inverteren */
 body > header button img {
     filter: none;
 }
 
-/* uitklapmenu: witte achtergrond + zwarte tekst */
 body > header nav ul:nth-of-type(2) {
     background-color: var(--background-light);
     color: var(--text-black);
@@ -46,15 +38,12 @@ body > header nav ul:nth-of-type(2) a {
     color: var(--text-black);
 }
 
-/* sluitknop ook zwart */
 body > header nav ul:nth-of-type(2) > li:first-of-type button {
     color: var(--text-black);
     border-color: var(--text-black);
 }
 
-/* -------------------------
-   SECTION 1 – CAROUSEL (MOBIEL)
-   ------------------------- */
+/*SECTION 1  CAROUSEL*/
 
 /* foto onder header beginnen */
 body > main {
@@ -74,7 +63,7 @@ main > section:first-of-type ul {
     scroll-behavior: contain;
     anchor-name: --carousel;
 
-    /* docent-code voor scroll-buttons */
+    /* geen woorden voor code */
     &::scroll-button(*) {
         position: fixed;
         position-anchor: --carousel;
@@ -101,7 +90,7 @@ main > section:first-of-type ul {
     }
 }
 
-/* elke slide 100% breedte */
+
 main > section:first-of-type li {
     flex: 0 0 100%;
     scroll-snap-align: center;
@@ -130,17 +119,13 @@ main > section:first-of-type figcaption {
     text-align: center;
 }
 
-/* -------------------------
-   SECTION 2 – WRAPPER MET ALLE PRODUCTINFO
-   (titel/prijs, kleur, maten, knop, beschrijving, was, size&fit)
-   ------------------------- */
+/* SECTION 2  WRAPPER MET ALLE PRODUCTINFO */
 
-/* de wrapper zelf (2e section in main) */
 main > section:nth-of-type(2) {
     display: block;
 }
 
-/* 2.1 Titel + prijs */
+/*  Titel + prijs */
 main > section:nth-of-type(2) > section:first-of-type {
     color: var(--text-black);
     display: flex;
@@ -163,7 +148,7 @@ main > section:nth-of-type(2) > section:first-of-type p {
     line-height: 1.3;
 }
 
-/* 2.2 Kleur */
+/*  Kleur */
 main > section:nth-of-type(2) > section:nth-of-type(2) {
     padding: 1em 1em;
     font-size: 1em;
@@ -173,7 +158,6 @@ main > section:nth-of-type(2) > section:nth-of-type(2) p {
     text-transform: uppercase;
 }
 
-/* lijst met kleurknoppen */
 main > section:nth-of-type(2) > section:nth-of-type(2) ul {
     list-style: none;
     margin: 0;
@@ -195,7 +179,7 @@ main > section:nth-of-type(2) > section:nth-of-type(2) img {
     object-fit: cover;
 }
 
-/* 2.3 Maten */
+/* Maten */
 main > section:nth-of-type(2) > section:nth-of-type(3) {
     padding: 0 1em .5em .5em;
 }
@@ -255,7 +239,7 @@ main > section:nth-of-type(2) > section:nth-of-type(4) svg path {
     fill: var(--text-black);
 }
 
-/* 2.5 Beschrijving */
+/* Beschrijving */
 main > section:nth-of-type(2) > section:nth-of-type(5) {
     padding: .75em 1em;
     font-size: 1em;
@@ -273,7 +257,7 @@ main > section:nth-of-type(2) > section:nth-of-type(5) ul {
     list-style: disc;
 }
 
-/* 2.6 Wasvoorschriften */
+/*  Wasvoorschriften */
 main > section:nth-of-type(2) > section:nth-of-type(6) {
     padding: .75em 1em;
     font-size: 1em;
@@ -291,7 +275,7 @@ main > section:nth-of-type(2) > section:nth-of-type(6) ul {
     list-style: disc;
 }
 
-/* 2.7 Size & Fit / Shipping / Support */
+/*Size en  Support  enzo*/
 main > section:nth-of-type(2) > section:nth-of-type(7) {
     padding: .5em 0;
     border-top: 1px solid #333;
@@ -320,10 +304,7 @@ main > section:nth-of-type(2) > section:nth-of-type(7) li::after {
     content: "+";
 }
 
-/* -------------------------
-   STYLED WITH / YOU MIGHT ALSO LIKE
-   (nu section 3 en 4 in main)
-   ------------------------- */
+/*Styled with*/
 
 /* Titels */
 main > section:nth-of-type(3) h2,
@@ -345,19 +326,17 @@ main > section:nth-of-type(4) ul {
     list-style: none;
 }
 
-/* Links + tekst altijd zwart */
+ 
 main > section:nth-of-type(3) a,
 main > section:nth-of-type(4) a {
     color: var(--text-black);
 }
 
-/* Elke tegel */
 main > section:nth-of-type(3) li,
 main > section:nth-of-type(4) li {
     flex: 0 0 40%;
 }
 
-/* Afbeeldingen */
 main > section:nth-of-type(3) img,
 main > section:nth-of-type(4) img {
     width: 100%;
@@ -373,10 +352,7 @@ main > section:nth-of-type(4) p {
     line-height: 1.4em;
 }
 
-/* -------------------------
-   LAATSTE SECTION – CATEGORIEËN BLOK
-   (5e section in main)
-   ------------------------- */
+/*Categorieen*/
 
 main > section:last-of-type {
     background-color: var(--background-light);
@@ -414,14 +390,9 @@ main > section:last-of-type ul ul li {
     margin-bottom: .1em;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================== */
+@media (min-width: 724px) {
 
-/* desktop vanaf ~724px → 45.25em */
-@media (min-width: 45.25em) {
-
-    /* MAIN → 2 kolommen: foto's links, info rechts */
+    /* foto's links */
     main {
         display: grid;
         grid-template-columns: 1.4fr 1fr;
@@ -430,12 +401,10 @@ main > section:last-of-type ul ul li {
         padding: 0 2em;
     }
 
-    /* SECTION 1 – FOTO'S LINKS */
     main > section:first-of-type {
         grid-column: 1;
     }
 
-    /* fotolijst: 2 kolommen, geen carousel */
     main > section:first-of-type ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -454,12 +423,10 @@ main > section:last-of-type ul ul li {
         display: none;
     }
 
-    /* WRAPPER (alle info) → rechterkolom */
+    /*  alle info  rechterkolom */
     main > section:nth-of-type(2) {
         grid-column: 2;
     }
-
-    /* styled with / you might also like / categorieblok full-width onderaan */
     main > section:nth-of-type(3),
     main > section:nth-of-type(4),
     main > section:last-of-type {
@@ -467,8 +434,7 @@ main > section:last-of-type ul ul li {
     }
 }
 
-/* tablet: 768px → 48em */
-@media (min-width: 48em) {
+@media (min-width: 768px) {
     main > section:nth-of-type(5) {
         padding: 2em 3em;
     }
@@ -478,8 +444,8 @@ main > section:last-of-type ul ul li {
     }
 }
 
-/* groot scherm: 1200px → 75em */
-@media (min-width: 75em) {
+
+@media (min-width: 1200px) {
     main > section:nth-of-type(5) > nav > ul {
         gap: 3em;
         max-width: 75em;

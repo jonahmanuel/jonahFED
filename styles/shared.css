@@ -1,22 +1,37 @@
-/**************/
-/* RESET      */
-/**************/
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/**************/
-/* FONT FACE  */
-/**************/
 
-/* @font-face ...  (laat zoals het is) */
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter-4/web/Inter-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
 
-/**********************/
-/* CUSTOM PROPERTIES */
-/*********************/
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter-4/web/Inter-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter-4/web/Inter-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
 .visually-hidden {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -25,7 +40,7 @@
     position: absolute;
     white-space: nowrap;
     width: 1px;
-  }
+}
 
 :root {
     --background-dark: black;
@@ -38,12 +53,23 @@
     --header-background: var(--background-dark);
 }
 
-/**************/
-/* BASIS / GENERIEK */
-/**************/
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-dark: #000;
+        --background-light: #111;
+        --text-white: #fff;
+        --text-black: #eee;
+        --header-background: var(--background-dark);
+        --header-items: var(--text-white);
+    }
+}
+
+
+/* basis */
+
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     background-color: var(--background-dark);
     color: var(--text-white);
     line-height: 1.5em;
@@ -59,15 +85,14 @@ a {
     text-decoration: none;
 }
 
-
 svg {
     width: 1em;
     height: 1em;
 }
 
-/**************/
-/* HEADER     */
-/**************/
+
+/* header     */
+
 
 header[data-hidden="true"] {
     transform: translateY(-100%);
@@ -93,15 +118,11 @@ header {
     transition: transform .3s ease;
 }
 
-header[data-hidden="true"] {
-    transform: translateY(-100%);
-}
-
 header > nav {
     width: 100%;
 }
 
-/* eerste UL */
+/* eerste ul */
 header > nav > ul:first-of-type {
     display: flex;
     align-items: center;
@@ -117,13 +138,12 @@ header > nav > ul:first-of-type > li:first-of-type button {
     cursor: pointer;
 }
 
-/* orders blijven hetzelfde */
-header nav ul:first-of-type li:nth-of-type(1) { 
-    order: 1; 
+header nav ul:first-of-type li:nth-of-type(1) {
+    order: 1;
 }
 
-header nav ul:first-of-type li:nth-of-type(2) { 
-    order: 2; 
+header nav ul:first-of-type li:nth-of-type(2) {
+    order: 2;
 }
 
 header nav ul:first-of-type li:nth-of-type(3) {
@@ -131,12 +151,12 @@ header nav ul:first-of-type li:nth-of-type(3) {
     margin: 0 auto;
 }
 
-header nav ul:first-of-type li:nth-of-type(4) { 
-    order: 4; 
+header nav ul:first-of-type li:nth-of-type(4) {
+    order: 4;
 }
 
-header nav ul:first-of-type li:nth-of-type(5) { 
-    order: 5; 
+header nav ul:first-of-type li:nth-of-type(5) {
+    order: 5;
 }
 
 header nav ul:first-of-type li:nth-of-type(3) svg {
@@ -154,16 +174,14 @@ header nav ul:first-of-type > li:nth-of-type(3) svg path {
     fill: var(--text-white);
 }
 
-/**************/
-/* MENU (2e UL) */
-/**************/
+/* menu 2e ul */
 
 header > nav > ul:nth-of-type(2) {
     position: fixed;
     inset: 0;
     background: var(--background-dark);
     color: var(--text-white);
-
+    overflow: hidden;
     padding: 5em 2em 2em;
     display: flex;
     flex-direction: column;
@@ -171,6 +189,20 @@ header > nav > ul:nth-of-type(2) {
     font-size: 1.2em;
     translate: -100% 0;
     transition: translate .3s ease;
+}
+
+/* menu-items mobiel: lijnen + pijltjes rechts */
+header > nav > ul:nth-of-type(2).toonMenu > li:not(:first-of-type) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .1em 0;
+    border-bottom: 0.006em solid currentColor;
+}
+
+header > nav > ul:nth-of-type(2).toonMenu > li:not(:first-of-type)::after {
+    content: "›";
+    font-size: 1em;
 }
 
 header > nav > ul:nth-of-type(2).toonMenu {
@@ -190,9 +222,11 @@ header > nav > ul:nth-of-type(2) > li:first-of-type button {
     font-size: 1em;
 }
 
-/**************/
-/* TABLET / DESKTOP */
-/**************/
+/* niet scrollen als menu open is */
+body.menu-open {
+    overflow: hidden;
+}
+
 
 @media (min-width: 768px) {
 
@@ -238,9 +272,6 @@ header > nav > ul:nth-of-type(2) > li:first-of-type button {
     }
 }
 
-/**************/
-/* GROOT DESKTOP */
-/**************/
 
 @media (min-width: 1200px) {
 
@@ -254,10 +285,6 @@ header > nav > ul:nth-of-type(2) > li:first-of-type button {
         transform: translateX(-50%);
     }
 }
-
-/**************/
-/* FOOTER BASE */
-/**************/
 
 footer {
     background: var(--background-light);
@@ -310,9 +337,9 @@ footer section > ul > li[data-open="true"] > ul {
     max-height: 500em;
 }
 
-/**************/
+
 /* FOOTER DESKTOP */
-/**************/
+
 
 @media (min-width: 768px) {
 
@@ -343,10 +370,6 @@ footer section > ul > li[data-open="true"] > ul {
     }
 }
 
-/**************/
-/* COPYRIGHT  */
-/**************/
-
 footer p {
     font-size: 1em;
     padding: 1.5em 0;
@@ -354,24 +377,25 @@ footer p {
     color: #555;
 }
 
-/**************/
-/* FOCUS STATES */
-/**************/
 
-/* standaard: geen lelijke default outline meer */
+
+
+/* Bron: MDN Web Docs — :focus-visible CSS pseudo-class
+   https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
+
 :focus {
     outline: none;
 }
 
-/* alles wat klikbaar is: knoppen, links, form inputs */
+/* alles wat klikbaar is: knoppen, links, inputs */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible {
-    outline: .15em solid var(--text-white);   /* valt goed op op zwarte achtergrond */
+    outline: .15em solid var(--text-white);
     outline-offset: .15em;
 }
 
-/* op lichte vlakken (wit) moet de rand zwart zijn, anders zie je 'm niet */
+/* op lichte vlakken moet de rand zwart zijn */
 footer a:focus-visible,
 main > section:nth-of-type(5) a:focus-visible,
 main > section:last-of-type a:focus-visible,

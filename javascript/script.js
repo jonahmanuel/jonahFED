@@ -1,16 +1,16 @@
-/* ============================================
-   STAP 1 – ALLE ELEMENTEN SELECTEREN
-============================================ */
 
-/* Header (voor scroll verbergen/tonen) */
+  //  ALLE ELEMENTEN SELECTEREN
+
+
+// Header (voor scroll verbergen/tonen) 
 const header = document.querySelector("header");
 
-/* Hamburger open-knop */
+// Knop om het menu te openen
 const openButton = document.querySelector(
   "header > nav > ul:first-of-type li:first-of-type button"
 );
 
-/* Het menu dat uitschuift */
+//  Het menu dat uitschuift 
 const menu = document.querySelector("header > nav > ul:nth-of-type(2)");
 
 /* Sluit-knop in het menu */
@@ -18,65 +18,58 @@ const closeButton = document.querySelector(
   "header > nav > ul:nth-of-type(2) li:first-of-type button"
 );
 
-/* Scroll positie bijhouden */
+// Scroll positie bijhouden 
 let lastScrollY = window.scrollY;
 
 
 
-/* ============================================
-   STAP 2 – EVENTLISTENERS KOPPELEN
-============================================ */
+// eventlisteners koppelen
 
-/* Klik op hamburger → menu openen */
 openButton.addEventListener("click", openMenu);
-
-/* Klik op sluitknop → menu sluiten */
 closeButton.addEventListener("click", closeMenu);
-
-/* Escape → menu sluiten */
 window.addEventListener("keydown", sluitMetEscape);
-
-/* Scroll → header verbergen/tonen */
 window.addEventListener("scroll", toonOfVerbergHeader);
 
 
+ 
+// functies
 
-/* ============================================
-   STAP 3 – FUNCTIES DIE WORDEN UITGEVOERD
-============================================ */
 
-/* Functie: Menu openen */
 function openMenu() {
   menu.classList.add("toonMenu");
   openButton.setAttribute("aria-expanded", "true");
+
+  // pagina mag niet meer scrollen
+  document.body.classList.add("menu-open");
 }
 
-/* Functie: Menu sluiten */
+// menu sluiten
 function closeMenu() {
   menu.classList.remove("toonMenu");
   openButton.setAttribute("aria-expanded", "false");
+
+  // scrollen weer toestaan
+  document.body.classList.remove("menu-open");
 }
 
-/* Functie: Sluiten met Escape */
+// sluiten met esc 
 function sluitMetEscape(event) {
   if (event.key === "Escape") {
-    menu.classList.remove("toonMenu");
-    openButton.setAttribute("aria-expanded", "false");
+    closeMenu();
   }
 }
 
-/* Functie: Header tonen/verbergen bij scrollen */
+// header wel of niet te zien bij scrollen.
 function toonOfVerbergHeader() {
-  // naar beneden scrollen → verbergen
   if (window.scrollY > lastScrollY) {
     header.setAttribute("data-hidden", "true");
   }
 
-  // omhoog scrollen → tonen
+  // omhoog scrollen dan weer tonen
   if (window.scrollY < lastScrollY) {
     header.removeAttribute("data-hidden");
   }
 
-  // positie onthouden
+  // nieuwe positie onthouden
   lastScrollY = window.scrollY;
 }
