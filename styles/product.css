@@ -1,0 +1,492 @@
+/* =========================
+   PRODUCT PAGE – MOBILE FIRST
+   ========================== */
+
+/* basis */
+body {
+    margin: 0;
+    background-color: var(--background-light);
+    color: var(--text-black);
+    font-size: 1em;           
+}
+
+/* =========================
+   PRODUCT PAGINA – HEADER THEMA
+   ========================== */
+
+/* header op productpagina altijd wit */
+body > header {
+    background-color: var(--background-light);
+}
+
+/* alle header-iconen zwart */
+body > header nav svg path {
+    stroke: var(--text-black);
+    fill: none;
+}
+
+/* LFDY-logo solid zwart */
+body > header nav ul:first-of-type li:nth-of-type(3) svg path {
+    fill: var(--text-black);
+    stroke: var(--text-black);
+}
+
+/* hamburgerplaatje niet meer inverteren */
+body > header button img {
+    filter: none;
+}
+
+/* uitklapmenu: witte achtergrond + zwarte tekst */
+body > header nav ul:nth-of-type(2) {
+    background-color: var(--background-light);
+    color: var(--text-black);
+}
+
+body > header nav ul:nth-of-type(2) a {
+    color: var(--text-black);
+}
+
+/* sluitknop ook zwart */
+body > header nav ul:nth-of-type(2) > li:first-of-type button {
+    color: var(--text-black);
+    border-color: var(--text-black);
+}
+
+/* -------------------------
+   SECTION 1 – CAROUSEL (MOBIEL)
+   ------------------------- */
+
+/* foto onder header beginnen */
+body > main {
+    margin-top: 4em;
+}
+
+main > section:first-of-type ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: contain;
+    anchor-name: --carousel;
+
+    /* docent-code voor scroll-buttons */
+    &::scroll-button(*) {
+        position: fixed;
+        position-anchor: --carousel;
+        position-visibility: always;
+        font-family: "Material Symbols Outlined";
+
+        appearance: none;
+        border: none;
+        background: rgb(255 255 255 / .5);
+        width: 3em;
+        height: 3em;
+    }
+
+    &::scroll-button(right) {
+        position-area: center;
+        justify-self: end;
+        content: '→' / 'Next';
+    }
+
+    &::scroll-button(left) {
+        position-area: center;
+        justify-self: start;
+        content: '←' / 'Previous';
+    }
+}
+
+/* elke slide 100% breedte */
+main > section:first-of-type li {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+}
+
+main > section:first-of-type figure {
+    margin: 0;
+    position: relative;
+}
+
+main > section:first-of-type img {
+    width: 100%;
+}
+
+main > section:first-of-type figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: .5em 1em;
+    font-size: 1em;
+    background-color: var(--background-light);
+    opacity: .8;
+    color: var(--text-black);
+    text-align: center;
+}
+
+/* -------------------------
+   SECTION 2 – WRAPPER MET ALLE PRODUCTINFO
+   (titel/prijs, kleur, maten, knop, beschrijving, was, size&fit)
+   ------------------------- */
+
+/* de wrapper zelf (2e section in main) */
+main > section:nth-of-type(2) {
+    display: block;
+}
+
+/* 2.1 Titel + prijs */
+main > section:nth-of-type(2) > section:first-of-type {
+    color: var(--text-black);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: .5em;
+    padding: .5em;
+}
+
+main > section:nth-of-type(2) > section:first-of-type h2 {
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+main > section:nth-of-type(2) > section:first-of-type p {
+    margin: 0;
+    padding: .5em 0;
+    font-size: 1em;
+    text-align: right;
+    line-height: 1.3;
+}
+
+/* 2.2 Kleur */
+main > section:nth-of-type(2) > section:nth-of-type(2) {
+    padding: 1em 1em;
+    font-size: 1em;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(2) p {
+    text-transform: uppercase;
+}
+
+/* lijst met kleurknoppen */
+main > section:nth-of-type(2) > section:nth-of-type(2) ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: .5em;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(2) button {
+    border: 1px solid var(--text-black);
+    padding: .15em;
+    cursor: pointer;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(2) img {
+    display: block;
+    width: auto;
+    height: 6em;
+    object-fit: cover;
+}
+
+/* 2.3 Maten */
+main > section:nth-of-type(2) > section:nth-of-type(3) {
+    padding: 0 1em .5em .5em;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(3) h2 {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(3) ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3em;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(3) button {
+    min-width: 4.3em;
+    min-height: 2.5em;
+    padding: .2em 0;
+    border: 1px solid #666;
+    background: none;
+    color: var(--text-black);
+    font-size: 1em;
+}
+
+/* 2.4 Waarschuw mij + save */
+main > section:nth-of-type(2) > section:nth-of-type(4) {
+    padding: 0 1.3em 1em .5em;
+    display: flex;
+    gap: .2em;
+    align-items: stretch;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(4) button:first-of-type {
+    flex: 1;
+    padding: .5em 0;
+    background: var(--text-black);
+    color: var(--text-white);
+    border: none;
+    font-size: 1em;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(4) button:last-of-type {
+    padding: 0 1em;
+    background: none;
+    border: 1px solid var(--text-black);
+    min-width: 4em;
+    font-size: 1em;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(4) svg path {
+    stroke: var(--text-black);
+    fill: var(--text-black);
+}
+
+/* 2.5 Beschrijving */
+main > section:nth-of-type(2) > section:nth-of-type(5) {
+    padding: .75em 1em;
+    font-size: 1em;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(5) h2 {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    margin: 0 0 .4em;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(5) ul {
+    margin: 0;
+    padding-left: 1em;
+    list-style: disc;
+}
+
+/* 2.6 Wasvoorschriften */
+main > section:nth-of-type(2) > section:nth-of-type(6) {
+    padding: .75em 1em;
+    font-size: 1em;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(6) h2 {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    margin: 0 0 .4em;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(6) ul {
+    margin: 0;
+    padding-left: 1em;
+    list-style: disc;
+}
+
+/* 2.7 Size & Fit / Shipping / Support */
+main > section:nth-of-type(2) > section:nth-of-type(7) {
+    padding: .5em 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(7) ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(7) li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .7em 1em;
+    border-top: 1px solid #333;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(7) li:first-child {
+    border-top: none;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(7) li::after {
+    content: "+";
+}
+
+/* -------------------------
+   STYLED WITH / YOU MIGHT ALSO LIKE
+   (nu section 3 en 4 in main)
+   ------------------------- */
+
+/* Titels */
+main > section:nth-of-type(3) h2,
+main > section:nth-of-type(4) h2 {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    margin: 2em 1em .5em;
+    color: var(--text-black);
+}
+
+/* De lijst met producten */
+main > section:nth-of-type(3) ul,
+main > section:nth-of-type(4) ul {
+    display: flex;
+    gap: .3em;
+    overflow-x: auto;
+    padding: 0 .4em;
+    margin: 0;
+    list-style: none;
+}
+
+/* Links + tekst altijd zwart */
+main > section:nth-of-type(3) a,
+main > section:nth-of-type(4) a {
+    color: var(--text-black);
+}
+
+/* Elke tegel */
+main > section:nth-of-type(3) li,
+main > section:nth-of-type(4) li {
+    flex: 0 0 40%;
+}
+
+/* Afbeeldingen */
+main > section:nth-of-type(3) img,
+main > section:nth-of-type(4) img {
+    width: 100%;
+}
+
+/* Beschrijving onder foto */
+main > section:nth-of-type(3) p,
+main > section:nth-of-type(4) p {
+    margin: .4em 0 0;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.4em;
+}
+
+/* -------------------------
+   LAATSTE SECTION – CATEGORIEËN BLOK
+   (5e section in main)
+   ------------------------- */
+
+main > section:last-of-type {
+    background-color: var(--background-light);
+    color: var(--text-black);
+    padding: 1em;
+}
+
+main > section:last-of-type nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+main > section:last-of-type nav > ul > li {
+    flex: 1 1 40%;
+}
+
+main > section:last-of-type h3 {
+    font-size: 1em;
+    text-transform: uppercase;
+    margin: 0 0 .15em;
+    font-weight: 600;
+}
+
+main > section:last-of-type a {
+    color: var(--text-black);
+    text-decoration: none;
+    font-size: 1em;
+}
+
+main > section:last-of-type ul ul li {
+    margin-bottom: .1em;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================== */
+
+/* desktop vanaf ~724px → 45.25em */
+@media (min-width: 45.25em) {
+
+    /* MAIN → 2 kolommen: foto's links, info rechts */
+    main {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 2em;
+        margin-top: 6em;
+        padding: 0 2em;
+    }
+
+    /* SECTION 1 – FOTO'S LINKS */
+    main > section:first-of-type {
+        grid-column: 1;
+    }
+
+    /* fotolijst: 2 kolommen, geen carousel */
+    main > section:first-of-type ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: .5em;
+        overflow-x: visible;
+        scroll-snap-type: none;
+    }
+
+    main > section:first-of-type li {
+        flex: none;
+        scroll-snap-align: none;
+    }
+
+    /* Caption alleen op mobiel */
+    main > section:first-of-type figcaption {
+        display: none;
+    }
+
+    /* WRAPPER (alle info) → rechterkolom */
+    main > section:nth-of-type(2) {
+        grid-column: 2;
+    }
+
+    /* styled with / you might also like / categorieblok full-width onderaan */
+    main > section:nth-of-type(3),
+    main > section:nth-of-type(4),
+    main > section:last-of-type {
+        grid-column: 1 / -1;
+    }
+}
+
+/* tablet: 768px → 48em */
+@media (min-width: 48em) {
+    main > section:nth-of-type(5) {
+        padding: 2em 3em;
+    }
+
+    main > section:nth-of-type(5) > nav > ul {
+        gap: 2em;
+    }
+}
+
+/* groot scherm: 1200px → 75em */
+@media (min-width: 75em) {
+    main > section:nth-of-type(5) > nav > ul {
+        gap: 3em;
+        max-width: 75em;
+        margin: 0;
+    }
+
+    main > section:nth-of-type(5) > nav > ul > li {
+        flex: 1 1 22%;
+    }
+}
