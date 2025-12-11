@@ -7,6 +7,7 @@
     <title>LFDY</title>
     <link rel="stylesheet" href="styles/shared.css">
     <link rel="stylesheet" href="styles/index.css">
+    
 
 </head>
 
@@ -15,7 +16,7 @@
         <nav>
             <ul>
                 <li>
-                    <button aria-label="Open menu">
+                    <button aria-label="Open menu" aria-expanded="false">
                         <img src="images/menu.svg" alt="Menu">
                     </button>
                 </li>
@@ -55,20 +56,35 @@
                     </svg>
                 </li>
             </ul>
+            <ul>
+                <li>
+                    <button type="button">sluit x</button>
+                </li>
+                <li><a href="#">New In</a></li>
+                <li><a href="#">See All</a></li>
+                <li><a href="#">Highlights</a></li>
+                <li><a href="#">Basics</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Stores</a></li>
+                <li><a href="#">App</a></li>
+                <li><a href="#">Brand</a></li>
+            </ul>
         </nav>
     </header>
     <main>
         <h1 class="visually-hidden">LFDY</h1>
         <section>
-            <a href="#">
-                <h2>All Products</h2>
-                <img src="images/home.png" alt="Alle Producten">
-                <!-- <img src="images/arrow.svg" alt="pijltje"> -->
-                <svg class="" width="22px" height="22px" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 8L21 12M21 12L17 16M21 12H3" stroke="rgba(var(--color-foreground), 1)" stroke-linecap="round" stroke-linejoin="round"></path>
+            <ul>
+              <li><h2>All Products</h2></li>
+              <li><img src="images/home.jpg" alt="Alle Producten"></li>
+              <li>
+                <svg width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 8L21 12M21 12L17 16M21 12H3"
+                        stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </a>
-        </section>
+              </li>
+            </ul>
+          </section>
         <section>
             <h2 class="visually-hidden">Winkels</h2>
             <ul>
@@ -119,6 +135,10 @@
                         3 pieces as an homage to our next chapter. Read more
                     </p>
                     <img src="images/parisdrop.jpg" alt="Nieuwe Parijs drop">
+                    <svg width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 8L21 12M21 12L17 16M21 12H3"
+                              stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </a>
             </article>
 
@@ -131,18 +151,26 @@
                         pieces. Find out more.
                     </p>
                     <img src="images/complexcon.png" alt="ComplexCon Drop">
+                    <svg width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 8L21 12M21 12L17 16M21 12H3"
+                              stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </a>
             </article>
 
-            </article>
-                <a href="#">
-                    <h2>THE NEW WINTER COLLECTION</h2>
-                    <p>The new Winter Collection styled by Veneda Carter features
-                        a wide variety of new styles, as well as reinvented classics.
-                        Find out more.
-                    </p>
-                    <img src="images/winter.png" alt="Nieuwe winter collectie">
-                </a>
+            <article>
+            <a href="#">
+                <h2>THE NEW WINTER COLLECTION</h2>
+                <p>The new Winter Collection styled by Veneda Carter features
+                    a wide variety of new styles, as well as reinvented classics.
+                    Find out more.
+                </p>
+                <img src="images/winter.png" alt="Nieuwe winter collectie">
+                <svg width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 8L21 12M21 12L17 16M21 12H3"
+                          stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
             </article>
         </section>
 
@@ -157,7 +185,6 @@
                         <label for="email" class="visually-hidden">Email Address</label>
                         <input id="email" type="email" placeholder="Email Address">
                     </form>
-
                 </figcaption>
             </figure>
         </section>
@@ -172,22 +199,22 @@
                     <li>
                         <h3>Tops</h3>
                         <ul>
-                            <li><a alt= href="#">Hoodies</a></li>
-                            <li><a alt= href="#">Sweaters</a></li>
-                            <li><a alt= href="#">Tees</a></li>
-                            <li><a alt= href="#">Longsleeves</a></li>
-                            <li><a alt= href="#">Tracksuits</a></li>
+                            <li><a href="#">Hoodies</a></li>
+                            <li><a href="#"">Sweaters</a></li>
+                            <li><a href="#">Tees</a></li>
+                            <li><a href="#">Longsleeves</a></li>
+                            <li><a href="#">Tracksuits</a></li>
                         </ul>
                     </li>
 
                     <li>
                         <h3>Bottoms</h3>
                         <ul>
-                            <li><a alt= href="#">Jorts</a></li>
-                            <li><a alt= href="#">Baggy Joggers</a></li>
-                            <li><a alt= href="#">Baggy Jeans</a></li>
-                            <li><a alt= href="#">Trackpants</a></li>
-                            <li><a alt= href="#">Joggers</a></li>
+                            <li><a href="#">Jorts</a></li>
+                            <li><a href="#">Baggy Joggers</a></li>
+                            <li><a href="#">Baggy Jeans</a></li>
+                            <li><a href="#">Trackpants</a></li>
+                            <li><a href="#">Joggers</a></li>
                         </ul>
                     </li>
 
@@ -217,15 +244,57 @@
     <footer>
         <section>
             <h2 class="visually-hidden">Footer</h2>
+    
             <ul>
-                <li><a href="#">Customer Service</a></li>
-                <li><a href="#">Company</a></li>
-                <li><a href="#">Legal</a></li>
-                <li><a href="#">Stores</a></li>
+                <!-- CUSTOMER SERVICE -->
+                <li>
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Retourneren</a></li>
+                        <li><a href="#">Verzendvoorwaarden</a></li>
+                        <li><a href="#">Bonuspunten</a></li>
+                    </ul>
+                </li>
+    
+                <!-- COMPANY -->
+                <li>
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Stores</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Social Responsibility</a></li>
+                    </ul>
+                </li>
+    
+                <!-- LEGAL -->
+                <li>
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Algemene Voorwaarden</a></li>
+                        <li><a href="#">Opdruk</a></li>
+                        <li><a href="#">Gegevensbescherming</a></li>
+                        <li><a href="#">Cookie-instellingen</a></li>
+                    </ul>
+                </li>
+    
+                <!-- STORES -->
+                <li>
+                    <h3>Stores</h3>
+                    <ul>
+                        <li><a href="#">Paris</a></li>
+                        <li><a href="#">Amsterdam</a></li>
+                        <li><a href="#">Berlin</a></li>
+                        <li><a href="#">View all</a></li>
+                    </ul>
+                </li>
             </ul>
-            <p>© live fast die young 2025</p>
+    
+            <p>© LIVE FAST DIE YOUNG 2025</p>
         </section>
     </footer>
+    <script src="javascript/script.js"></script>
 </body>
 
 </html>

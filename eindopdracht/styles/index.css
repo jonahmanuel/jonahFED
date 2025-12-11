@@ -4,93 +4,400 @@
     box-sizing: border-box;
 }
 
-/**************/
-/* FONT FACE */
-/**************/
-
-/* @font-face {
-    font-family: lfdy;
-    src: url();
-}
-
-@font-face {
-    font-family: lfdy;
-    src: url();
-}
-
-@font-face {
-    font-family: lfdy;
-    src: url();
-} */
-
-
-
 /**********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 
 :root {
-    --background-color: black;
-    --header-items: white;
-    --header-background: black;
+    --background-dark: black;
+    --background-light: white;
+
     --text-white: white;
     --text-black: black;
+
+    --header-items: var(--text-white);
+    --header-background: var(--background-dark);
 }
 
+/* =========================
+   SECTION 1 – HERO
+   ========================== */
 
-/* section 1 */
-main section:first-of-type img {
+main > section:first-of-type ul {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-auto-rows: minmax(16em, 70vh);
     width: 100%;
-    height: 60vh;
-    /* object-fit: cover;
-    display: block; */
 }
 
-/* container rond hero */
-main > section:first-of-type a {
-    /* position: relative;
-    display: block; */
-
+main > section:first-of-type li:nth-of-type(2) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
 }
 
-/* “ALL PRODUCTS” linksonder */
-main section:first-of-type h2 {
-    /* position: absolute;
-    left: 1em;
-    bottom: .5em; */
+main > section:first-of-type img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main > section:first-of-type li:nth-of-type(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: end;
+    justify-self: start;
+    margin: 0 0 1em 1em;
+    z-index: 1;
+}
+
+main > section:first-of-type h2 {
     font-size: 1.5em;
     font-weight: 600;
     text-transform: uppercase;
 }
 
-/* pijltje rechtsonder */
-main section:first-of-type p {
-    /* position: absolute;
-    right: 1em;
-    bottom: .5em; */
+main > section:first-of-type li:nth-of-type(3) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    align-self: end;
+    justify-self: end;
+    margin: 0 .7em .7em 0;
 }
 
-section:nth-of-type(1) {
-    display: grid;
-    grid-tem
-}
-
-main section:nth-of-type(1) svg {
+main > section:first-of-type svg {
     width: 1.5em;
-    height: 1.5em; 
-    path {
-        fill: var(--text-white);
+    height: 1.5em;
+}
+
+main > section:first-of-type svg path {
+    stroke: var(--text-white);
+}
+
+/* 768px → 48em */
+@media (min-width: 48em) {
+
+    main > section:first-of-type ul {
+        grid-auto-rows: minmax(24em, 90vh);
+    }
+
+    main > section:first-of-type h2 {
+        font-size: 2.5em;
     }
 }
 
+/* =========================
+   SECTION 2 – PRODUCT CARDS
+   ========================== */
 
+main > section:nth-of-type(2) ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: .1em;
+}
 
+main > section:nth-of-type(2) li {
+    flex: 0 0 30%;
+    scroll-snap-align: start;
+}
 
+main > section:nth-of-type(2) img {
+    width: 100%;
+    height: auto;
+}
 
-/* section 2 */
+main > section:nth-of-type(2) li a {
+    position: relative;
+}
 
-/* section 3 */
+main > section:nth-of-type(2) h3 {
+    position: absolute;
+    left: .5em;
+    bottom: .5em;
+    margin: 0;
+    font-size: .7em;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: var(--text-white);
+    text-decoration: underline;
+}
 
-/* section 4 */
+/* 768px → 48em */
+@media (min-width: 48em) {
 
-/* section 5 */
+    main > section:nth-of-type(2) li {
+        flex: 0 0 22%;
+    }
+
+    main > section:nth-of-type(2) ul {
+        gap: .2em;
+    }
+
+    main > section:nth-of-type(2) h3 {
+        font-size: .9em;
+        left: 1em;
+        bottom: 1em;
+    }
+}
+
+/* 1200px → 75em */
+@media (min-width: 75em) {
+
+    main > section:nth-of-type(2) li {
+        flex: 0 0 16.5%;
+    }
+
+    main > section:nth-of-type(2) ul {
+        gap: .2em;
+    }
+
+    main > section:nth-of-type(2) h3 {
+        font-size: 1em;
+        left: 1.2em;
+        bottom: 1.2em;
+    }
+}
+
+/* =========================
+   SECTION 3 – DROPS
+   ========================== */
+
+section > article svg {
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+    align-self: end;
+    justify-self: end;
+    margin: 0 .8em .8em 0;
+    z-index: 1;
+    height: 1.5em;
+    width: 1.5em;
+}
+
+section > article a {
+    display: grid;
+    grid-template-rows: 1fr auto auto;
+}
+
+section > article img {
+    grid-row: 1 / 4;
+    grid-column: 1 / -1;
+    width: 100%;
+    height: auto;
+    opacity: .8;
+}
+
+section > article h2 {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    align-self: end;
+    margin: 0 .8em .3em .8em;
+    z-index: 1;
+}
+
+section > article p {
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+    margin: 0 1em 1em .8em;
+    z-index: 1;
+    line-height: 1.4;
+}
+
+/* 768px → 48em */
+@media (min-width: 48em) {
+
+    main > section:nth-of-type(3) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main > section:nth-of-type(3) article {
+        flex: 1 1 45%;
+    }
+}
+
+/* 1200px → 75em */
+@media (min-width: 75em) {
+
+    main > section:nth-of-type(3) article {
+        flex: 1 1 30%;
+    }
+}
+
+/* =========================
+   SECTION 4 – NEWSLETTER
+   ========================== */
+
+section figure {
+    display: grid;
+    grid-template-rows: 1fr auto auto auto;
+    max-height: 90vh;
+    overflow: hidden;
+}
+
+section figure img {
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .95;
+}
+
+section figure figcaption {
+    grid-row: 2 / -1;
+    grid-column: 1 / -1;
+    z-index: 1;
+    padding: 0 1em 1.5em;
+    display: grid;
+    gap: .5em;
+}
+
+section figure figcaption h2 {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+section figure figcaption p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+section figure form {
+    display: block;
+    margin-top: .5em;
+}
+
+section figure input {
+    width: 100%;
+    padding: .4em 0;
+    border: none;
+    border-bottom: 1px solid var(--text-white);
+    background: transparent;
+    font-size: .8em;
+}
+
+section figure input::placeholder {
+    color: var(--text-white);
+    opacity: 1;
+}
+
+/* 1024px → 64em */
+@media (min-width: 64em) {
+
+    main > section:nth-of-type(4) {
+        background: var(--background-light);
+        display: flex;
+        justify-content: center;
+    }
+
+    main > section:nth-of-type(4) figure {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
+    main > section:nth-of-type(4) figure img {
+        grid-column: 2 / 3;
+        width: 100%;
+        height: auto;
+        max-height: 32.5em;
+        object-fit: cover;
+    }
+
+    main > section:nth-of-type(4) figure figcaption {
+        grid-column: 1 / 2;
+        padding: 8em;
+        color: var(--text-black);
+        align-self: start;
+    }
+
+    main > section:nth-of-type(4) h2 {
+        margin: 0 0 .5em 0;
+        font-size: 2.8em;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    main > section:nth-of-type(4) p {
+        margin: 0 0 2em 0;
+        font-size: 1.2em;
+        color: var(--text-black);
+    }
+
+    main > section:nth-of-type(4) input {
+        width: 83%;
+        border: none;
+        border-bottom: 1px solid var(--text-black);
+        padding: .5em 0;
+        font-size: 1em;
+        color: var(--text-black);
+        background: transparent;
+    }
+
+    main > section:nth-of-type(4) input::placeholder {
+        color: var(--text-black);
+        opacity: .4;
+    }
+}
+
+/* =========================
+   SECTION 5 – CATEGORIEËN
+   ========================== */
+
+main > section:nth-of-type(5) {
+    background-color: var(--background-light);
+    color: var(--text-black);
+    padding: 1em;
+}
+
+main > section:nth-of-type(5) > nav > ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+main > section:nth-of-type(5) > nav > ul > li {
+    flex: 1 1 45%;
+}
+
+main > section:nth-of-type(5) h3 {
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-bottom: .1em;
+    font-weight: 600;
+}
+
+main > section:nth-of-type(5) a {
+    color: var(--text-black);
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* tablet 48em */
+@media (min-width: 48em) {
+    main > section:nth-of-type(5) {
+        padding: 2em 3em;
+    }
+
+    main > section:nth-of-type(5) > nav > ul {
+        gap: 2em;
+    }
+}
+
+/* groot scherm 75em */
+@media (min-width: 75em) {
+    main > section:nth-of-type(5) > nav > ul {
+        gap: 3em;
+        max-width: 75em;
+        margin: 0;
+    }
+
+    main > section:nth-of-type(5) > nav > ul > li {
+        flex: 1 1 22%;
+    }
+}
